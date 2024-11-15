@@ -1,0 +1,223 @@
+@media only screen and (max-width:1100px) {
+    :root{
+        --font-size-primary: 2.5rem
+    }
+    .logo{
+        width: 13%;
+    }
+    .navbar{
+        height: 10%;
+    }
+    button{
+        height: 100%;
+    }
+    .bg-models {
+        width: 1100px;
+        top: calc(50% - 100px);
+    }
+    .text-hero {
+        top: calc(50% - 40px);
+    }
+    .text-head {
+        font-size: 20rem;
+    }
+    .bg-cloud-back {
+        width: 1800px;
+        top: calc(50% + 150px);
+    }
+    .plane {
+        top: calc(50% - 390px);
+        left: calc(50% + 150px);
+    }
+    .bg-planes {
+        width: 2500px;
+        top: calc(50% + 329px);
+    }
+    .bg-cloud-front {   
+        width: 1550px;
+        top: calc(50% + 200px);
+    }
+    .nav-items{
+        width: 60%;
+    }
+    .projects>.text-head {
+        position: absolute;
+        top: 312%;
+    }
+    .project-item {
+        gap: 35px;
+        width: 38%;
+        height: 40vh;
+    }
+    .project-btn {
+        height: 13%;
+    }
+    .btn-submit{
+        height: 9%;
+    }
+
+    .quotation-info {
+        height: 91%;
+        gap: 13vh;
+    }
+
+    form {
+        height: 45%;
+        padding-top: 5vh;
+    }
+
+    .btn-submit {
+        height: 11%;
+    }
+
+    .portfolio {
+        background-size: contain;
+    }
+
+    .portfolio-head {
+        top: 218%;
+    }
+
+    div:has(>canvas){
+        height: 80% !important;
+    }
+
+
+}
+
+@media only screen and (max-width:500px){
+    *{
+        width: 100%;
+    }
+    .text-head {
+        font-size: 8rem;
+        text-align: center;
+    }
+    .portfolio-head {
+        top: 233%;
+        font-size: 8rem;
+        text-align: center;
+    }
+    div:has(>canvas){
+        height: 54% !important;
+        position: absolute;
+        top: 16%;
+    }
+    .portfolio {
+        background-size: contain;
+    }
+    .project-item {
+        gap: 35px;
+        width: 93%;
+        height: 63vh;
+    }
+    .projects {
+        padding-top: 15vh;
+    }
+    .quotation {
+        height: 115vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .quotation-info {
+        height: 45%;
+        gap: 3vh;
+        padding: 12vh 0 0vh 0;
+        width: 80%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .quotation-text {
+        font-size: calc(var(--font-size-primary)* 2);
+    }
+    form {
+        height: 55%;
+        width: 65%;
+        padding-top: 5vh;
+    }
+    #phone, #e_mail {
+        width: 48vw;
+    }
+    .bg-models {
+        width: 500px;
+        top: calc(50% - 100px);
+    }
+    .bg-cloud-back {
+        width: 1500px;
+        top: calc(50% + 239px);
+    }
+    .plane {
+        top: calc(50% - 244px);
+        left: calc(50% + 64px);
+    }
+    .bg-planes {
+        width: 1500px;
+        top: calc(50% + 500px);
+    }
+    
+    .bg-cloud-front {
+        width: 700px;
+        top: calc(50% + 400px);
+    }
+    .social > .icons {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+    }
+    .close-btn {
+        height: 10%;
+        right: 0;
+        width: 12.9%;
+    }
+    .navbar {
+        height: 13%;
+            position: fixed;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    }
+    .logo {
+        width: 25%;
+    }
+    .burger{
+        width: 13%;
+    }
+    .nav-items {
+        width: 41%;
+        position: fixed;
+        top: 26%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        width: auto;
+    }
+    .nav-items>li:last-child {
+        width: 100%;
+    }
+    .text-head-sub {
+        font-size: 8rem;
+        text-align: center;
+    }
+    .about{
+        background-size: 100% 50%;
+    }
+    .rec-img {
+        width: 230vw;
+    }
+    .about>p {
+        font-size: 1rem;
+        width: 92%;
+        top: 161%;
+        left: 5%;
+        transform: rotateZ(0);
+    }
+    
+}
