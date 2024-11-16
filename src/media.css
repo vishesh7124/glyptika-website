@@ -40,9 +40,12 @@
     .nav-items{
         width: 60%;
     }
+    .projects {
+        position: relative;
+    }
     .projects>.text-head {
         position: absolute;
-        top: 312%;
+        top: 1.5%;
     }
     .project-item {
         gap: 35px;
