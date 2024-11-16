@@ -82,6 +82,7 @@ body{
   height: 100px;
   width: 100px;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   filter: brightness(1.5) saturate(0%);
 }

@@ -221,3 +221,45 @@
     }
     
 }
+
+@media only screen and (max-width:360px){
+    .text-head {
+        font-size: 6rem;
+    }
+    .text-head-sub {
+        font-size: 6rem;
+    }
+    .about>p {
+        font-size: 0.9rem;
+        width: 92%;
+        top: 159%;
+    }
+    .portfolio-head {
+        font-size: 6rem;
+    }
+    .project-item {
+        width: 100%;
+        height: 65vh;
+    }
+    .quotation {
+        height: 128vh;
+    }
+    .quotation-info {
+        height: 50%;
+    }
+    form {
+        height: 55%;
+        margin: 5vh;
+    }
+    .btn-submit {
+        height: 11%;
+        font-size: 2rem;
+    }
+    .project-btn {
+        height: 11%;
+    }
+    div:has(>canvas) {
+        height: 46% !important;
+        top: 9%;
+    }
+}
