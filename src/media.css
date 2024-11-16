@@ -126,7 +126,11 @@
     .project-item {
         gap: 35px;
         width: 93%;
-        height: 63vh;
+        height: fit-content;
+        padding: 0 0 2vh 0;
+    }
+    .project-img {
+        height: 35vh;
     }
     .projects {
         padding-top: 15vh;
