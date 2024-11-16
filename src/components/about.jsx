@@ -7,6 +7,7 @@ const About = ()=>{
             <div className="rec-img">
 
             </div>
+            <p >At Glyptika, we specialize in bringing imagination to life through the art of 3D modeling. Whether you're in need of stunning architectural visualizations, product designs, or immersive virtual environments, our team delivers cutting-edge solutions tailored to your vision</p>
             {/* <div className="rectangle-1 rectangle-odd">
                 <div className="rectangle rectangle-2">
                     <p className="text about-text">
@@ -28,7 +29,6 @@ const About = ()=>{
                     </p>
                 </div>
             </div> */}
-            <p >At Glyptika, we specialize in bringing imagination to life through the art of 3D modeling. Whether you're in need of stunning architectural visualizations, product designs, or immersive virtual environments, our team delivers cutting-edge solutions tailored to your vision</p>
         </div>
     )
 }

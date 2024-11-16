@@ -10,7 +10,6 @@ const Projects = () => {
   const handleOpenPopUp = (videoUrl)=>{
     setPopUp(true)
     setVideoToPlay(videoUrl);
-    console.log(videoUrl)
   }
   const handleClosePopUp = ()=>{
     setPopUp(false)

@@ -9,7 +9,7 @@ export default [
         "id": 2,
         "projectName": "AirPods",
         "projectDesc": "Experience the precision and elegance of 3D design with this AirPods animation created in Blender. This project features lifelike modeling, detailed texturing, realistic lighting, and smooth motion to capture the essence of Apple's iconic design. The animation highlights my ability to blend technical expertise with creative storytelling, making it a perfect addition to my professional portfolio. Disclaimer: The AirPods design is the intellectual property of Apple Inc. This animation is created for educational and portfolio purposes only. All trademarks and copyrights belong to their respective owners. No commercial use or affiliation is implied or intended",
-        "url": `https://www.youtube.com/watch?v=o9r1xXtjQbw&list=PLdoic26WJSoxBQsCblRLiELYloIICO9z6&index=2`
+        "url": `https://youtu.be/o9r1xXtjQbw?list=https://www.youtube.com/watch?v=o9r1xXtjQbw&list=PLdoic26WJSoxBQsCblRLiELYloIICO9z6`
     }
     ,
     {

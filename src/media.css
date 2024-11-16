@@ -23,19 +23,19 @@
     }
     .bg-cloud-back {
         width: 1800px;
-        top: calc(50% + 150px);
+        top: calc(50% + 500px);
     }
     .plane {
         top: calc(50% - 390px);
         left: calc(50% + 150px);
     }
     .bg-planes {
-        width: 2500px;
-        top: calc(50% + 329px);
+        width: 1800px;
+        top: calc(50% + 650px);
     }
-    .bg-cloud-front {   
-        width: 1550px;
-        top: calc(50% + 200px);
+    .bg-cloud-front {
+        width: 1150px;
+        top: calc(50% + 550px);
     }
     .nav-items{
         width: 60%;
@@ -81,7 +81,21 @@
     div:has(>canvas){
         height: 80% !important;
     }
-
+    .about {
+        gap: 50px;
+    }
+    .rec-img {
+        height: 54vh;
+        width: 124vw;
+    }
+    .about>p {
+        height: 22%;
+        width: 80%;
+        font-size: 1.8rem;
+        top: 163%;
+        left: 12%;
+        /* transform: rotateZ(17deg); */
+    }
 
 }
 

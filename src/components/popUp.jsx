@@ -7,7 +7,7 @@ import RingLoader from "react-spinners/RingLoader";
 
 const PopUp = (props) => {
   const vidRef = useRef(null);
-  const [isloading, setIsLoading] = useState(null)
+  const [isloading, setIsLoading] = useState(false)
   const handlePlayVideo = () => {
     vidRef.current.play();
   };
@@ -25,9 +25,9 @@ const PopUp = (props) => {
                 width="100%"
                 controls={true}
                 autoPlay={true}
-                onReady={() => setIsLoading(false)}
-                onBuffer={() => setIsLoading(true)}
-                onBufferEnd={() => setIsLoading(false)}
+                // onReady={() => setIsLoading(false)}
+                // onBuffer={() => setIsLoading(true)}
+                // onBufferEnd={() => setIsLoading(false)}
               />
             )}
             <button onClick={props.onClose} className="close-btn"><IoIosClose/></button>
@@ -35,7 +35,7 @@ const PopUp = (props) => {
       :
       <RingLoader
       color={"white"}
-      loading={isLoading}
+      loading={isloading}
       size={150}
       aria-label="Loading Spinner"
       data-testid="loader"
