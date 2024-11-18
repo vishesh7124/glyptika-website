@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link , useLocation} from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
+import Sidebar from "./sidebar";
 
 
 
@@ -11,6 +12,9 @@ const Nav = ()=>{
     const [NavBlur, setNavBlur] = useState(false)
     const [activeLink, setActiveLink] = useState(null)
     const toggleNavOpen = ()=>{
+        setShow(!show)
+    }
+    const handleSideBarClose = ()=>{
         setShow(!show)
     }
     const toggleBlur = ()=>{
@@ -77,27 +81,27 @@ const Nav = ()=>{
                 <div className="logo">
 
                 </div>
-                {(!navMobile || show) &&                         <ul className="nav-items">
+                {(!navMobile)?                       
+                    <ul className="nav-items">
                             <li>
                                 <HashLink onClick={handleLinkClick} to="/#about" smooth className={activeLink === 'Home' ? 'active-link' : '' }>About Us</HashLink>
                             </li>
-                            {/* <li>
-                                <a href="#">Team</a>
-                                </li> */}
                             <li>
                                 <HashLink onClick={handleLinkClick} to="/#projects" smooth className={activeLink === 'portfolio' ? 'active-link' : '' }>Projects</HashLink>
                             </li>
                             <li>
                                 <HashLink onClick={handleLinkClick} to="/#quotation" smooth className={activeLink === 'portfolio' ? 'active-link' : '' }><button className="nav-btn text-uppercase">Quotations</button></HashLink>
                             </li>
-                        </ul>}
+                        </ul> :(show)?
+                            <Sidebar activeLink={activeLink} handleLinkClick={handleLinkClick} onClose={handleSideBarClose}/> :""
+                            }
                         {
-                            navMobile &&                         <div className={`burger ${show? "burger-top":""}`} onClick={toggleNavOpen}>
+                            (navMobile && !show) &&                         <div className={`burger ${show? "burger-top":""}`} onClick={toggleNavOpen}>
                             <div className="line"></div>
                             <div className="line"></div>
                             <div className="line"></div>
                     </div>
-                        }
+                }
 
             </div>
         </div>

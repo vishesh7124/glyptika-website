@@ -489,3 +489,36 @@ input{
 .bg-blur{
   backdrop-filter: blur(15px);
 }
+
+.sidebar{
+  position: fixed;
+  height: 100vh;
+  width:100%;
+  background: rgb(124, 218, 255, 0.8);;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 12vh 0;
+}
+
+.last-li-btn{
+  width: 50%;
+  margin-top: auto; 
+}
+
+.sidebar-close-btn {
+  position: absolute;
+  background-color: transparent;
+  height: auto;
+  top: 6%;
+  right: 6%;
+  width: auto;
+}
+
+.sidebar-close-btn > svg {
+  height: 10vh;
+  width: 18vw;
+}
