@@ -225,6 +225,11 @@ button{
   width: 100vw;
   position: relative;
   overflow: hidden;
+  background-image: url(./assets/images/arts.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  background-size: 47% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

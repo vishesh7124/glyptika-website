@@ -86,7 +86,7 @@
     }
     .about {
         gap: 50px;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         padding-bottom: 2vh;
     }
@@ -246,6 +246,8 @@
         height: fit-content;
         padding-top: 13vh;
         gap: 260px;
+        background-position: center;
+        background-size: contain;
     }
     .rec-img {
         width: 230vw;
