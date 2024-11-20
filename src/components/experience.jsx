@@ -2,7 +2,7 @@ import { ContactShadows, Environment, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { useState, useEffect } from "react";
-import { DissolveMaterial } from "./DissolveMaterial";
+// import { DissolveMaterial } from "./DissolveMaterial";
 import { EffectComposer } from "@react-three/postprocessing";
 // import Model from "./Plane";
 import earthTexture from '../assets/images/earth_texture.jpeg';
@@ -66,24 +66,24 @@ export const Experience = ()=>{
         {(visibleItem === "box") && (
             <mesh scale={0.4} position={!mobile?[1.6, 0.7, 0.5]:[0,0,0]} >
                 <boxGeometry  />
-                <DissolveMaterial
+                {/* <DissolveMaterial
                     baseMaterial={boxMaterial}
                     visible={itemDisplayed === "box"}
                     onFadeOut={onFadeOut}
                     color="#0082b2"
-                />
+                /> */}
             </mesh>
         )}
         
         {(visibleItem === "sphere") && (
             <mesh scale={0.5} position={!mobile?[1.6, 0.7, 0.5]:[0,0,0]}>
                 <sphereGeometry />
-                <DissolveMaterial
+                {/* <DissolveMaterial
                     baseMaterial={sphereMaterial}
                     visible={itemDisplayed === "sphere"}
                     onFadeOut={onFadeOut}
                     color="#0082b2"
-                />
+                /> */}
             </mesh>
         )}
         
