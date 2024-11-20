@@ -1,7 +1,7 @@
 import React from "react";
 import BallCanvas from "./ball";
 import { Canvas } from "@react-three/fiber";
-import { Experience } from "./experience";
+// import { Experience } from "./experience";
 import {Bloom, EffectComposer} from '@react-three/postprocessing'
 import Blender from "../assets/images/logos/blender.png"
 import Revit from "../assets/images/logos/revit.png"
@@ -25,14 +25,13 @@ const About = ()=>{
     return(
         <div className="about section " id="about">
                 <div className="about-models absolute">
-                    <Canvas shadows camera={{position: [3,3,5], fov:20}}>
-                        {/* <color attach="background" args={["#ececec"]} /> */}
+                    {/* <Canvas shadows camera={{position: [3,3,5], fov:20}}>
                         <ambientLight intensity={0.1}/>
                         <Experience />
                         <EffectComposer>
                             <Bloom luminanceThreshold={1} intensity={0.7} mipmapBlur/>
                         </EffectComposer>
-                    </Canvas>
+                    </Canvas> */}
 
                 </div>
             {/* <div className="paper-3d h-100 w-full">
