@@ -48,7 +48,7 @@ const About = ()=>{
             <div className="softwares flex">
 
                 {icons.map((icon,index)=>(
-                    <div key={index} className="software-item w-auto">
+                    <div key={index} className="software-item max-w-28  ">
                         <div className="w-28 h-28">
                             <BallCanvas icon={icon.logo}/>
                         </div>
