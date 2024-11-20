@@ -30,7 +30,7 @@ const Projects = () => {
       </div>
       <div className="project-items my-10">
         {Data.map((item,index)=>(
-            <ProjectItem key={index} projectName={item.projectName} projectDesc={item.projectDesc} handleOpenPopUp={()=>handleOpenPopUp(item.url)}/>
+            <ProjectItem key={index} projectName={item.projectName} projectDesc={item.projectDesc} thumbnail={item.img} handleOpenPopUp={()=>handleOpenPopUp(item.url)}/>
         ))}
       </div>
       {popUp && <PopUp videoUrl={videoToPlay} onClose={handleClosePopUp}/>}

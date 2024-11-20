@@ -38,10 +38,10 @@ const Hero = ()=>{
     return(
         <div className="section main" id="main">
             <img src={bgModels} data-speedx="0.2" data-speedy="-0.1" alt="" className="parallax bg-models" ref={el => parallaxElements.current[0] = el} />
-            <div className="text-hero parallax" data-speedx="0.5" data-speedy="-0.2" ref={el => parallaxElements.current[1] = el}>
+            <div className="text-hero parallax" data-speedx="0.5" data-speedy="-0.25" ref={el => parallaxElements.current[1] = el}>
                 <h1 className="text-head">Glyptika</h1>
             </div>
-            <img src={bgCloudBack} data-speedx="0.3" data-speedy="0.25" alt="" className="parallax bg-cloud-back" ref={el => parallaxElements.current[2] = el}/>
+            <img src={bgCloudBack} data-speedx="0.3" data-speedy="-0.15" alt="" className="parallax bg-cloud-back" ref={el => parallaxElements.current[2] = el}/>
             <img src={plane} alt="" data-speedx="0.2" data-speedy="0.2" className="parallax plane plane-1" ref={el => parallaxElements.current[3] = el} />
             {/* <img src={plane} alt="" data-speedx="0" data-speedy="0" className="parallax plane plane-2" ref={el => parallaxElements.current[4] = el} /> */}
             <img src={bgPlanes} data-speedx="0.4" data-speedy="0.6" alt="" className="parallax bg-planes" ref={el => parallaxElements.current[5] = el} />

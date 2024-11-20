@@ -2,7 +2,8 @@ import React from "react";
 import ScrollTest from "../components/scroll";
 import Nav from "../components/navbar"
 import Hero from "../components/hero";
-import About from "../components/about";
+// import About from "../components/about";
+import About from "../components/about_us";
 import Portfolio from "../components/portfolio";
 import Projects from "../components/projects";
 import Quotation from "../components/quotation";
@@ -14,6 +15,7 @@ const Landing = (props)=>{
             {/* <ScrollTest/> */}
             <Nav/>
             <Hero scrollPositon = {props.scrollPositon}/>
+            {/* <About/> */}
             <About/>
             <Portfolio/>
             <Projects/>

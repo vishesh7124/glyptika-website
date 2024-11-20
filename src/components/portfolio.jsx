@@ -12,11 +12,11 @@ const Portfolio = ()=>{
             {/* <h1 className="text-head-sub text-uppercase">Portfolio</h1> */}
             <Canvas flat camera={{fov:22}} className="cylinder">
                 {/* <OrbitControls/> */}
-                <ambientLight/>
+                <ambientLight intensity={4}/>
                 <Cyl/>
                 <EffectComposer>
                     <Bloom
-                        // mipmapBlur
+                        mipmapBlur
                         // intensity={50} // The bloom intensity.
                         // blurPass={undefined} // A blur pass.
                         // kernelSize={KernelSize.LARGE} // blur kernel size

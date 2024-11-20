@@ -18,7 +18,7 @@ const Nav = ()=>{
         setShow(!show)
     }
     const toggleBlur = ()=>{
-        if(window.scrollY>90){
+        if(window.scrollY>400){
 
             setNavBlur(true);
         }else{

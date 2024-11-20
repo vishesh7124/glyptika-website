@@ -102,6 +102,10 @@ h1{
   font-family: var(--font-links);
 }
 
+.text{
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -121,6 +125,7 @@ button{
   font-size: var(--font-size-primary);
   border-radius: 36px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 
@@ -214,22 +219,42 @@ button{
 }
 
 .about{
-  padding-top: 15vh;
+  padding-top: 8vh;
   background: black;
-  background-image: url(/src/assets/images/bg-about-removebg-preview.png);
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-position: bottom;
   height: 105vh;
   width: 100vw;
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 10vh;
 
-} 
+}
 
+.about-models{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.about-content{
+  display: flex;
+  width: 60%;
+  padding-left: 10vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.about-head{
+  font-family: var(--font-links);
+  font-size: 12rem;
+}
+
+.softwares{
+  padding-left: 10vw;
+}
 
 .rectangle-1{
   display: flex;
@@ -283,6 +308,7 @@ button{
 .portfolio{
   height: 100vh;
   width: 100vw;
+  position: relative;
   background: black;
   display: flex;
   flex-direction: column;
@@ -297,7 +323,7 @@ button{
 
 .portfolio-head {
   position: absolute;
-  top: 210%;
+  top: 10%;
   font-size: 16rem;
 }
 
@@ -344,7 +370,7 @@ button{
 .project-img{
   height: 44%;
   width: 100%;
-  background: url(/src/assets/images/proj.png);
+  /* background: url(/src/assets/images/proj.png); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

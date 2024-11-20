@@ -17,16 +17,21 @@
     "@react-three/fiber": "^8.17.10",
     "@react-three/postprocessing": "^2.16.3",
     "@types/three": "^0.169.0",
+    "gl-noise": "^1.6.1",
     "gsap": "^3.12.5",
+    "leva": "^0.9.35",
+    "maath": "^0.10.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.1",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.28.0",
     "react-router-hash-link": "^2.4.3",
     "react-spinners": "^0.14.1",
     "react-spring": "^9.7.4",
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "three-custom-shader-material": "^6.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

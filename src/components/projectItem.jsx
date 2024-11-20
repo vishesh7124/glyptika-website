@@ -30,7 +30,7 @@ const ProjectItem = (props) => {
 
   return (
     <div className="project-item">
-        <div className="project-img">
+        <div className="project-img" style={{background:`url(${props.thumbnail})`,backgroundRepeat:"no-repeat",backgroundSize:"100% 100%"}} >
         </div>
         <div className="project-text">
             <div className="project-name">
