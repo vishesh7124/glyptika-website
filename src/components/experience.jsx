@@ -4,8 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { useState, useEffect } from "react";
 import { DissolveMaterial } from "./DissolveMaterial";
 import { EffectComposer } from "@react-three/postprocessing";
-import Model from "./Plane";
-import { Cloud } from "./Cloud";
+// import Model from "./Plane";
 import earthTexture from '../assets/images/earth_texture.jpeg';
 
 export const Experience = ()=>{
