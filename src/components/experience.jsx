@@ -11,7 +11,7 @@ export const Experience = ()=>{
     let tex = useTexture(earthTexture)
     const boxMaterial = new THREE.MeshStandardMaterial({color:'white'})
     const sphereMaterial = new THREE.MeshStandardMaterial({color:'white',map:tex})
-    const items = ["box", "sphere"];
+    const items = ["box", "sphere","plane"];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleItem, setVisibleItem] = useState("box");
     const [mobile, setMobile] = useState(false);
@@ -87,7 +87,7 @@ export const Experience = ()=>{
             </mesh>
         )}
         
-        {/* {(visibleItem === "plane") && (
+        {(visibleItem === "plane") && (
             <Model
                 rotation={[1.4, 0.6, -5.7]}
                 scale={0.5}
@@ -96,7 +96,7 @@ export const Experience = ()=>{
                 dissolveVisible={itemDisplayed === "plane"}
                 onFadeOut={onFadeOut}
             />
-        )} */}
+        )}
         {/* {(visibleItem === "cloud") && (
             <Cloud
                 // rotation={[1.4, 0.6, -5.7]}
