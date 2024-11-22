@@ -9,7 +9,7 @@ const Sidebar = (props) => {
                     <li>
             <HashLink
                 onClick={props.handleLinkClick}
-                to="/#home"
+                to="/#main"
                 smooth
                 className={props.activeLink === "Home" ? "active-link" : ""}
             >

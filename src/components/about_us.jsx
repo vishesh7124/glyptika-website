@@ -40,8 +40,9 @@ const About = ()=>{
             <div className="about-content flex flex-col justify-center items-start">
                 <h1 className="about-head">About Us</h1>
                 <p className="text-lg">At Glyptika, We are a team of passionate and experienced professionals in
-                    the field of 3D modeling, animation, and visual effects. We have a strong background
-                    in software development and a deep understanding of the latest technologies and trends.
+                    the field of 3D modeling, animation, and visual effects.
+                    We specialize in creating visually stunning and realistic content through 3D modeling, 3D and 2D animations, and design.
+
                     </p>    
             </div>
             <div className="softwares flex">

@@ -65,8 +65,8 @@ const Quotation = () => {
                 </div>
             </div>
             <div className="contact">
-                <p className='m-15'>{address}</p>
-                <p className='m-15'>{contact_number}</p>
+                <p className='m-15 overflow-hidden'>{address}</p>
+                <p className='m-15 overflow-hidden'>{contact_number}</p>
             </div>
         </div>  
       </div>

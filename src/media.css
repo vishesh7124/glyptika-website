@@ -164,7 +164,7 @@
         align-items: flex-start;
     }
     .quotation-text {
-        font-size: calc(var(--font-size-primary)* 2);
+        font-size: calc(var(--font-size-primary)* 1.5);
     }
     form {
         height: 55%;
