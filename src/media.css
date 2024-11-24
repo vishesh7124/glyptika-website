@@ -167,7 +167,7 @@
         font-size: calc(var(--font-size-primary)* 1.5);
     }
     form {
-        height: 55%;
+        height: auto;
         width: 65%;
         padding-top: 5vh;
     }
