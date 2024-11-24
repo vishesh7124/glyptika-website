@@ -303,7 +303,7 @@
         height: 50%;
     }
     form {
-        height: 55%;
+        height: auto;
         margin: 5vh;
     }
     .btn-submit {
