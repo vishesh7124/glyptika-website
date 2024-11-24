@@ -19,7 +19,7 @@ const Quotation = () => {
     const form = useRef();
     const handleSubmit = (e)=>{
         e.preventDefault();
-        const service_id = 'service_borakaa'
+        const service_id = 'service_gxz9sm8'
         const template_id = 'template_2h41989'
         const public_key = 'emtVCf7DKKt-U0J5j'
         const templateParams ={
