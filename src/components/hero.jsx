@@ -11,23 +11,26 @@ const Hero = ()=>{
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const parallaxElements = useRef([]);
+    const maxScrollOffset = 500;
 
     useEffect(() => {
         const handleScroll = () => {
             // Update scroll position
-            setScrollPosition(window.scrollY);
+            const normalizedScroll = Math.min(window.scrollY / window.innerHeight, 1) * maxScrollOffset;
+            setScrollPosition(normalizedScroll);
         };
-
+        
         // Add scroll event listener
         window.addEventListener("scroll", handleScroll);
-
+        
         // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     },[]);
-
+    
     useEffect(() => {
+        console.log(scrollPosition)
         // Update the transform style for each parallax element based on scroll position
         parallaxElements.current.forEach((el) => {
             const speedY = el.dataset.speedy; // Get the speed for the y-axis
