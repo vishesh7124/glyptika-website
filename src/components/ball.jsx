@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
-
+import { useState } from "react";
+import { PerformanceMonitor } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -36,8 +37,10 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [dpr, setDpr] = useState(1)
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas dpr={dpr} frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+      <PerformanceMonitor flipflops={3} onFallback={() => setDpr(1)}>
       <Suspense
         fallback={
             null
@@ -50,6 +53,7 @@ const BallCanvas = ({ icon }) => {
         <Ball imgUrl={icon}></Ball>
 
       <Preload all />
+      </PerformanceMonitor>
     </Canvas>
   );
 };
