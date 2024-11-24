@@ -1,16 +1,22 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
+import { PerformanceMonitor } from "@react-three/drei";
 // import {OrbitControls} from "@react-three/drei"
 import Cyl from "./Cyl";
 import { EffectComposer,Bloom,ToneMapping } from '@react-three/postprocessing'
+import { useState } from "react";
 
 
 
 const Portfolio = ()=>{
+    const [dpr, setDpr] = useState(1)   
     return(
         <div className="section portfolio" id="portfolio">
             {/* <h1 className="text-head-sub text-uppercase">Portfolio</h1> */}
-            <Canvas flat camera={{fov:22}} className="cylinder">
+            <Canvas flat camera={{fov:22}} className="cylinder" dpr={dpr}>
+                <PerformanceMonitor onChange={({ factor }) => setDpr(Math.round(0.5 + 1.5 * factor, 1))}>
+
+
                 {/* <OrbitControls/> */}
                 <ambientLight intensity={4}/>
                 <Cyl/>
@@ -25,9 +31,10 @@ const Portfolio = ()=>{
                         // mipmapBlur={false} // Enables or disables mipmap blur.
                         // resolutionX={Resolution.AUTO_SIZE} // The horizontal resolution.
                         // resolutionY={Resolution.AUTO_SIZE} // The vertical resolution.
-                    />
+                    />x
                     <ToneMapping adaptive/>
-                    </EffectComposer>
+                </EffectComposer>
+                </PerformanceMonitor>
             </Canvas>
             <div className="portfolio-head ">
                 <h1 className="text-uppercase">Portfolio</h1>

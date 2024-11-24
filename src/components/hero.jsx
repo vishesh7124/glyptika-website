@@ -30,7 +30,6 @@ const Hero = ()=>{
     },[]);
     
     useEffect(() => {
-        console.log(scrollPosition)
         // Update the transform style for each parallax element based on scroll position
         parallaxElements.current.forEach((el) => {
             const speedY = el.dataset.speedy; // Get the speed for the y-axis
