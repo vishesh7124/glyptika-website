@@ -14,7 +14,7 @@ const Portfolio = ()=>{
         <div className="section portfolio" id="portfolio">
             {/* <h1 className="text-head-sub text-uppercase">Portfolio</h1> */}
             <Canvas flat camera={{fov:22}} frameloop="demand" className="cylinder" dpr={1}>
-                <PerformanceMonitor flipflops={3} onFallback={() => setDpr(1)}>
+                <PerformanceMonitor flipflops={3} onFallback={() => console.log("fallback")}>
 
 
                 {/* <OrbitControls/> */}
