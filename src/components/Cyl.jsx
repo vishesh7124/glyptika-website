@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from "three";
 import { useTexture } from '@react-three/drei';
 import { invalidate, useFrame } from '@react-three/fiber';
-import texture from '../assets/images/portfolio_2.png';
+import texture from '../assets/images/portfolio_2.webp';
 
 const Cyl = () => {
     const cyl = useRef(null);

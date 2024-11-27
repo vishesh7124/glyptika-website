@@ -3,12 +3,12 @@ import BallCanvas from "./ball";
 import { Canvas } from "@react-three/fiber";
 // import { Experience } from "./experience";
 import {Bloom, EffectComposer} from '@react-three/postprocessing'
-import Blender from "../assets/images/logos/blender.png"
-import Revit from "../assets/images/logos/revit.png"
-import illustrator from "../assets/images/logos/illustrator_logo.png"
-import premiere from "../assets/images/logos/premiere_logo.png"
-import Unreal from "../assets/images/logos/unreal.png" 
-import aEffects from "../assets/images/logos/effects_logo.png"
+import Blender from "../assets/images/logos/blender.webp"
+import Revit from "../assets/images/logos/revit.webp"
+import illustrator from "../assets/images/logos/illustrator_logo.webp"
+import premiere from "../assets/images/logos/premiere_logo.webp"
+import Unreal from "../assets/images/logos/unreal.webp" 
+import aEffects from "../assets/images/logos/effects_logo.webp"
 
 const icons = [
     { name: "Blender", logo: Blender },
