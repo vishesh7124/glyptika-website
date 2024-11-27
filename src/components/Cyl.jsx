@@ -19,7 +19,7 @@ const Cyl = () => {
     }, [tex]);
 
     useFrame((state, delta) => {
-        cyl.current.rotation.y += delta;
+        cyl.current.rotation.y += delta *0.4;
     });
 
     return (
