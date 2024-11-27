@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from "three";
 import { useTexture } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { invalidate, useFrame } from '@react-three/fiber';
 import texture from '../assets/images/portfolio_2.png';
 
 const Cyl = () => {
@@ -20,6 +20,7 @@ const Cyl = () => {
 
     useFrame((state, delta) => {
         cyl.current.rotation.y += delta *0.4;
+        invalidate();
     });
 
     return (

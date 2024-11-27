@@ -13,7 +13,7 @@ const Portfolio = ()=>{
     return(
         <div className="section portfolio" id="portfolio">
             {/* <h1 className="text-head-sub text-uppercase">Portfolio</h1> */}
-            <Canvas flat camera={{fov:22}} className="cylinder" dpr={dpr}>
+            <Canvas flat camera={{fov:22}} frameloop="demand" className="cylinder" dpr={dpr}>
                 <PerformanceMonitor flipflops={3} onFallback={() => setDpr(1)}>
 
 
