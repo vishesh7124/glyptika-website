@@ -39,7 +39,7 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
   const [dpr, setDpr] = useState(1)
   return (
-    <Canvas dpr={dpr} frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas dpr={1} frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <PerformanceMonitor flipflops={3} onFallback={() => setDpr(1)}>
       <Suspense
         fallback={
