@@ -7,8 +7,8 @@ import emailjs from '@emailjs/browser';
 import {Link} from 'react-router-dom'
 
 const Quotation = () => {
-    const [instagram, setInstragram] = useState("https://www.instagram.com/teamglyptika/")
-    const [linkedIn, setLinkedIn] = useState("https://www.linkedin.com/in/glyptika/")
+    const [instagram, setInstragram] = useState("https://www.instagram.com/glyptika_studios")
+    const [linkedIn, setLinkedIn] = useState("https://www.linkedin.com/company/glyptika-studios-llp/")
     const [fiverr, setFiverr] = useState("https://www.fiverr.com/teamglyptika/create-stunning-3d-models-animations-and-visual-effects-for-your-project")
     const [contact_number, setContact_number] = useState('8810207029')
     const [address, setAddess] = useState("Venture Lab, Thapar University, Patiala")
