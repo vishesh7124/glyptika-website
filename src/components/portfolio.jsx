@@ -1,9 +1,8 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerformanceMonitor } from "@react-three/drei";
-// import {OrbitControls} from "@react-three/drei"
 import Cyl from "./Cyl";
-import { EffectComposer,Bloom,ToneMapping } from '@react-three/postprocessing'
+// import { EffectComposer,Bloom,ToneMapping } from '@react-three/postprocessing'
 import { useState } from "react";
 
 
@@ -18,12 +17,12 @@ const Portfolio = ()=>{
 
 
                 {/* <OrbitControls/> */}
-                <ambientLight intensity={4}/>
+                <ambientLight intensity={2}/>
                 <Cyl/>
-                <EffectComposer>
+                {/* <EffectComposer>
                     <Bloom
                         mipmapBlur
-                        // intensity={50} // The bloom intensity.
+                        intensity={0} // The bloom intensity.
                         // blurPass={undefined} // A blur pass.
                         // kernelSize={KernelSize.LARGE} // blur kernel size
                         luminanceThreshold={0} // luminance threshold. Raise this value to mask out darker elements in the scene.
@@ -33,7 +32,7 @@ const Portfolio = ()=>{
                         // resolutionY={Resolution.AUTO_SIZE} // The vertical resolution.
                     />x
                     <ToneMapping adaptive/>
-                </EffectComposer>
+                </EffectComposer> */}
                 </PerformanceMonitor>
             </Canvas>
             <div className="portfolio-head ">
