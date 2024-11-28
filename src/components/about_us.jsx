@@ -1,5 +1,6 @@
 import React from "react";
 import BallCanvas from "./ball";
+import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./experience";
 import {Bloom, EffectComposer} from '@react-three/postprocessing'
@@ -9,6 +10,7 @@ import illustrator from "../assets/images/logos/illustrator_logo.png"
 import premiere from "../assets/images/logos/premiere_logo.png"
 import Unreal from "../assets/images/logos/unreal.png" 
 import aEffects from "../assets/images/logos/effects_logo.png"
+import { PerformanceMonitor } from "@react-three/drei";
 
 const icons = [
     { name: "Blender", logo: Blender },
@@ -21,16 +23,20 @@ const icons = [
 
 ]
 
+
 const About = ()=>{
+    const [dpr, setDpr] = useState(1);
     return(
         <div className="about section " id="about">
                 <div className="about-models absolute">
-                    <Canvas shadows camera={{position: [3,3,5], fov:20}}>
-                        <ambientLight intensity={0.1}/>
-                        <Experience />
-                        <EffectComposer>
-                            <Bloom luminanceThreshold={1} intensity={0.7} mipmapBlur/>
-                        </EffectComposer>
+                    <Canvas dpr={dpr} shadows camera={{position: [3,3,5], fov:20}}>
+                        <PerformanceMonitor onChange={({ factor }) => setDpr(Math.round(0.5 + 1.5 * factor, 1))}>
+                            <ambientLight intensity={0.1}/>
+                            <Experience />
+                            <EffectComposer>
+                                <Bloom luminanceThreshold={1} intensity={0.7} mipmapBlur/>
+                            </EffectComposer>
+                        </PerformanceMonitor>
                     </Canvas>
 
                 </div>
