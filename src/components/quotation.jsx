@@ -25,6 +25,7 @@ const Quotation = () => {
         const templateParams ={
             from_name: name,
             from_email: email,
+            from_phone: phone,
             to_name : 'Glyptika',
             message:details,    
         }
