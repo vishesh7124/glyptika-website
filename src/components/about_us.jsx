@@ -25,12 +25,12 @@ const icons = [
 
 
 const About = ()=>{
-    const [dpr, setDpr] = useState(1);
+    const [dpr, setDpr] = useState(0.5);
     return(
         <div className="about section " id="about">
                 <div className="about-models absolute">
-                    <Canvas dpr={dpr} shadows camera={{position: [3,3,5], fov:20}}>
-                        <PerformanceMonitor onChange={({ factor }) => setDpr(Math.round(0.5 + 1.5 * factor, 1))}>
+                    <Canvas dpr={0.5} shadows camera={{position: [3,3,5], fov:20}}>
+                        <PerformanceMonitor onChange={({ factor }) => setDpr(0.5)}>
                             <ambientLight intensity={0.1}/>
                             <Experience />
                             <EffectComposer>
