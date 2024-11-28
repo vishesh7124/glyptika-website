@@ -1,3 +1,4 @@
+// DissolveMaterial.jsx
 import { useFrame } from "@react-three/fiber";
 import { patchShaders } from "gl-noise";
 import { easing } from "maath";
@@ -9,30 +10,28 @@ const vertexShader = /* glsl */ `
   varying vec2 vUv;
   void main() {
     vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }`;
 
-const fragmentShader = patchShaders(/* glsl */ `
+const fragmentShader = /* glsl */ `
   varying vec2 vUv;
   uniform float uThickness;
   uniform vec3 uColor;
   uniform float uProgress;
   
+  float random(vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+  }
   
   void main() {
-    gln_tFBMOpts opts = gln_tFBMOpts(1.0, 0.3, 2.0, 5.0, 1.0, 5, false, false);
-    float noise = gln_sfbm(vUv, opts); // THE ORIGINAL CODE FROM THE TUTORIAL
-    // float noise = gln_sfbm(vPosition, opts); //  use the world position instead of the uv for a better effect working on all objects
-    noise = gln_normalize(noise);
-
+    float noise = random(vUv);
     float progress = uProgress;
 
     float alpha = step(1.0 - progress, noise);
     float border = step((1.0 - progress) - uThickness, noise) - alpha;
     
-    csm_DiffuseColor.a = alpha + border;
-    csm_DiffuseColor.rgb = mix(csm_DiffuseColor.rgb, uColor, border);
-  }`);
-
+    gl_FragColor = vec4(uColor, alpha + border);
+  }`;
 
 export function DissolveMaterial({
   baseMaterial,
@@ -44,40 +43,36 @@ export function DissolveMaterial({
   onFadeOut,
 }) {
   const uniforms = React.useRef({
-    uThickness: { value: 0.1 },
-    uColor: { value: new THREE.Color("#eb5a13").multiplyScalar(20) },
+    uThickness: { value: thickness },
+    uColor: { value: new THREE.Color(color).multiplyScalar(intensity) },
     uProgress: { value: 0 },
   });
 
-  React.useEffect(() => {
-    uniforms.current.uThickness.value = thickness;
-    uniforms.current.uColor.value.set(color).multiplyScalar(intensity);
-  }, [thickness, color, intensity]);
-
   useFrame((_state, delta) => {
-    easing.damp(
-      uniforms.current.uProgress,
-      "value",
-      visible ? 1 : 0,
-      duration,
-      delta
-    );
+    try {
+      easing.damp(
+        uniforms.current.uProgress,
+        "value",
+        visible ? 1 : 0,
+        duration,
+        delta
+      );
 
-    if (uniforms.current.uProgress.value < 0.1 && onFadeOut) {
-      onFadeOut();
+      if (uniforms.current.uProgress.value < 0.1 && onFadeOut) {
+        onFadeOut();
+      }
+    } catch (error) {
+      console.error("Dissolve Material Frame Error:", error);
     }
   });
 
   return (
-    <>
-      <CSM
-        baseMaterial={baseMaterial}
-        vertexShader={vertexShader}
-        fragmentShader={fragmentShader}
-        uniforms={uniforms.current}
-        toneMapped={false}
-        transparent
-      />
-    </>
+    <shaderMaterial
+      uniforms={uniforms.current}
+      vertexShader={vertexShader}
+      fragmentShader={fragmentShader}
+      transparent={true}
+      depthWrite={false}
+    />
   );
 }
