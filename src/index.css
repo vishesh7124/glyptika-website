@@ -410,6 +410,14 @@ button{
   overflow: hidden;
 }
 
+.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
 video{
   height:100%;
   width: 100%;
